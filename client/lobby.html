@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Мафия — Лобби</title>
+
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="lobby-card">
+
+            <div class="lobby-header">
+
+                <h1>Лобби</h1>
+
+                <div class="room-info">
+                    Комната:
+                    <strong id="roomCode">------</strong>
+                </div>
+
+                <div class="room-name" id="roomName">
+                    Загрузка...
+                </div>
+
+            </div>
+
+
+            <div class="players-header">
+
+                <h2>Игроки</h2>
+
+                <span id="playersCount">
+                    0 / 0
+                </span>
+
+            </div>
+
+
+            <div id="playersList" class="players-list">
+                Загрузка игроков...
+            </div>
+
+            <div id="gameStartedNotice" class="game-started-notice hidden">
+                <div class="game-started-title">Игра началась</div>
+                <div class="game-started-text">Лобби закрыто. Ожидайте следующего этапа игры.</div>
+            </div>
+
+            <div class="lobby-actions">
+
+                <button
+                    id="readyButton"
+                    class="menu-button">
+                    Готов
+                </button>
+
+                <button
+                    id="startGameButton"
+                    class="menu-button"
+                    style="display: none;">
+                    Начать игру
+                </button>
+
+                <button
+                    id="restartRoomButton"
+                    class="menu-button"
+                    style="display: none;">
+                    Сыграть снова
+                </button>
+
+                <button
+                    id="leaveRoomButton"
+                    class="menu-button logout-button">
+                    Выйти из комнаты
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/notifications.js"></script>
+    <script src="/avatar.js"></script>
+    <script src="/lobby.js"></script>
+
+</body>
+</html>

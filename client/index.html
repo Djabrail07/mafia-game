@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Мафия — Регистрация</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="auth-container">
+
+    <section class="register-card">
+
+        <div class="logo">
+            МАФИЯ
+        </div>
+
+        <div class="steps">
+
+            <div class="step active" id="step1">
+                1
+            </div>
+
+            <div class="step-line"></div>
+
+            <div class="step" id="step2">
+                2
+            </div>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ШАГ 1 -->
+        <!-- ========================= -->
+
+        <div id="accountStep">
+
+            <h1>Создание аккаунта</h1>
+
+            <p class="subtitle">
+                Введите данные для регистрации
+            </p>
+
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@mail.com"
+                    autocomplete="email"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="password">
+                    Пароль
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Минимум 6 символов"
+                    autocomplete="new-password"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="confirmPassword">
+                    Повторите пароль
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Повторите пароль"
+                    autocomplete="new-password"
+                >
+
+            </div>
+
+
+            <button
+    type="button"
+    id="nextButton"
+    class="primary-button"
+>
+    Далее
+</button>
+
+<p class="login-text">
+    Уже есть аккаунт?
+    <a href="/login.html">Войти</a>
+</p>
+
+        </div>
+
+
+        <!-- ========================= -->
+        <!-- ШАГ 2 -->
+        <!-- ========================= -->
+
+        <div
+            id="profileStep"
+            class="hidden"
+        >
+
+            <h1>Профиль</h1>
+
+            <p class="subtitle">
+                Настройте свой профиль
+            </p>
+
+
+            <!-- АВАТАР -->
+
+            <div class="avatar-container">
+
+                <img
+                    id="avatarPreview"
+                    src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23333333'/%3E%3Ccircle cx='60' cy='45' r='22' fill='%23888888'/%3E%3Cpath d='M25 105c5-25 20-35 35-35s30 10 35 35' fill='%23888888'/%3E%3C/svg%3E"
+                    alt="Аватар"
+                    class="avatar-preview"
+                >
+
+                <label
+                    for="avatarInput"
+                    class="avatar-button"
+                >
+                    Выбрать аватар
+                </label>
+
+                <input
+                    type="file"
+                    id="avatarInput"
+                    accept="image/png,image/jpeg,image/webp"
+                    hidden
+                >
+
+                <p class="avatar-hint">
+                    PNG, JPG или WEBP до 5 МБ
+                </p>
+
+            </div>
+
+
+            <!-- НИК -->
+
+            <div class="form-group">
+
+                <label for="nickname">
+                    Никнейм
+                </label>
+
+                <input
+                    type="text"
+                    id="nickname"
+                    placeholder="Ваш ник"
+                    maxlength="20"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- КНОПКИ -->
+
+            <div class="button-row">
+
+                <button
+                    type="button"
+                    id="backButton"
+                    class="secondary-button"
+                >
+                    Назад
+                </button>
+
+                <button
+                    type="button"
+                    id="createButton"
+                    class="primary-button"
+                >
+                    Создать аккаунт
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="notifications.js"></script>
+<script src="avatar.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

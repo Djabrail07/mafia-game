@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Мафия — Главное меню</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="auth-container">
+
+        <section class="register-card main-menu-card">
+
+            <div class="logo">
+                МАФИЯ
+            </div>
+
+
+            <div class="user-info">
+
+                <div class="user-avatar">
+                    <span id="userAvatarFallback" class="avatar-fallback">?</span>
+                    <img
+                        id="userAvatar"
+                        src=""
+                        alt="Аватар"
+                    >
+                </div>
+
+                <div class="user-text">
+
+                    <div class="user-label">
+                        Вы вошли как
+                    </div>
+
+                    <div
+                        id="userNickname"
+                        class="user-nickname"
+                    >
+                        Загрузка...
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="menu-buttons">
+
+                <button
+                    type="button"
+                    id="createGameButton"
+                    class="primary-button"
+                >
+                    Создать игру
+                </button>
+
+
+                <button
+                    type="button"
+                    id="findGameButton"
+                    class="secondary-button menu-button"
+                >
+                    Найти игру
+                </button>
+
+
+                <button
+                    type="button"
+                    id="profileButton"
+                    class="secondary-button menu-button"
+                >
+                    Профиль
+                </button>
+
+                <button
+                    type="button"
+                    id="leaderboardButton"
+                    class="secondary-button menu-button"
+                >
+                    Лидеры
+                </button>
+
+                <button
+                    type="button"
+                    id="seasonButton"
+                    class="secondary-button menu-button"
+                >
+                    Сезоны
+                </button>
+
+                <button
+                    type="button"
+                    id="logoutButton"
+                    class="secondary-button menu-button logout-button"
+                >
+                    Выйти
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="notifications.js"></script>
+    <script src="avatar.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

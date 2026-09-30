@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Мафия — Найти игру</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<main class="auth-container">
+
+    <section class="register-card">
+
+        <div class="logo">
+            МАФИЯ
+        </div>
+
+
+        <h1>
+            Найти игру
+        </h1>
+
+
+        <p class="subtitle">
+            Введите код комнаты
+        </p>
+
+
+        <!-- Код комнаты -->
+
+        <div class="form-group">
+
+            <label for="roomCode">
+                Код комнаты
+            </label>
+
+            <input
+                type="text"
+                id="roomCode"
+                placeholder="Например: A7K29F"
+                maxlength="10"
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <!-- Пароль -->
+
+        <div class="form-group">
+
+            <label for="roomPassword">
+                Пароль комнаты
+                <span class="optional">
+                    (если требуется)
+                </span>
+            </label>
+
+            <input
+                type="password"
+                id="roomPassword"
+                placeholder="Введите пароль"
+                maxlength="100"
+            >
+
+        </div>
+
+
+        <!-- Кнопки -->
+
+        <div class="button-row">
+
+            <button
+                type="button"
+                id="backButton"
+                class="secondary-button"
+            >
+                Назад
+            </button>
+
+
+            <button
+                type="button"
+                id="joinRoomButton"
+                class="primary-button"
+            >
+                Найти игру
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="notifications.js"></script>
+<script src="join-room.js"></script>
+
+</body>
+
+</html>

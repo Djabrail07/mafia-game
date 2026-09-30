@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="page">
+        <section class="panel profile-panel">
+            <div class="panel-header">
+                <button type="button" class="back-button" onclick="window.location.href='/main.html'">← Назад</button>
+                <h1>Профиль</h1>
+            </div>
+
+            <div class="profile-controls">
+                <label class="menu-button avatar-upload-button">
+                    <input id="avatarInput" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+                    Изменить аватар
+                </label>
+            </div>
+
+            <div id="profileContent" class="profile-shell">
+                <div class="loading-state">Загрузка профиля…</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="notifications.js"></script>
+    <script src="avatar.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

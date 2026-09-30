@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Мафия — Игра</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="page game-page">
+        <div class="game-shell">
+            <div id="winnerResult" class="winner-banner hidden"></div>
+            <header class="game-header">
+                <div>
+                    <div class="game-header__label">Комната</div>
+                    <div id="gameRoomCode" class="game-header__code">--</div>
+                </div>
+                <div class="game-header__status">
+                    <span id="gamePhaseBadge" class="phase-badge">Подготовка</span>
+                </div>
+            </header>
+
+            <div id="roleReveal" class="role-reveal hidden">
+                <div class="role-reveal__title">Ваша роль</div>
+                <div id="playerRole" class="role-name">Загрузка...</div>
+                <div id="roleHint" class="role-hint">Проверка роли...</div>
+            </div>
+
+            <div class="game-main-panel">
+                <div class="game-role-panel">
+                    <div class="role-label">Роль</div>
+                    <div id="playerRoleInline" class="role-name">Загрузка...</div>
+                    <div id="roleHintInline" class="role-hint">Ожидание начала раунда.</div>
+                </div>
+
+                <div class="game-timer-panel">
+                    <div class="timer-label">Фаза</div>
+                    <div id="gameTimer" class="game-timer">00:00</div>
+                    <div id="gameTimerText" class="timer-text">Подготовка к игре...</div>
+                </div>
+            </div>
+
+            <div class="game-actions-panel">
+                <div class="panel-title">Действия</div>
+                <div id="actionList" class="action-list">
+                    <div class="action-item muted">Ожидание...</div>
+                </div>
+            </div>
+
+            <div class="game-players-panel">
+                <div class="panel-title">Игроки</div>
+                <div id="gamePlayersList" class="game-players-list"></div>
+            </div>
+
+            <div class="chat-panel">
+                <div class="panel-title">Чат</div>
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input-row">
+                    <input id="chatInput" type="text" maxlength="180" placeholder="Напишите сообщение..." />
+                    <button id="chatSendButton" class="menu-button chat-send" type="button">Отправить</button>
+                </div>
+            </div>
+
+            <button id="backToLobbyButton" class="menu-button secondary" type="button">Вернуться в лобби</button>
+        </div>
+
+            <section id="finishModal" class="finish-modal hidden" role="dialog" aria-modal="true" aria-labelledby="finishModalTitle">
+                <div class="finish-modal__panel">
+                    <div class="finish-modal__eyebrow">Матч завершён</div>
+                    <h1 id="finishModalTitle" class="finish-modal__title">Итоги игры</h1>
+                    <p id="finishModalTeam" class="finish-modal__team"></p>
+                    <div class="finish-modal__roster-heading">Изменение MMR всех участников</div>
+                    <ul id="finishModalPlayers" class="finish-modal__players"></ul>
+                    <p id="finishModalTotal" class="finish-modal__total"></p>
+                    <div class="finish-modal__footer">
+                        <span>Возврат через <strong id="finishModalCountdown">00:30</strong></span>
+                        <button id="finishModalReturnButton" class="menu-button" type="button">Вернуться сейчас</button>
+                    </div>
+                </div>
+            </section>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/notifications.js"></script>
+    <script src="/avatar.js"></script>
+    <script src="/game.js"></script>
+</body>
+</html>

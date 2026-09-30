@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Мафия — Создание игры</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+<main class="auth-container">
+
+    <section class="register-card">
+
+        <div class="logo">
+            МАФИЯ
+        </div>
+
+
+        <h1>
+            Создание игры
+        </h1>
+
+
+        <p class="subtitle">
+            Создайте комнату для игры
+        </p>
+
+
+        <!-- Название -->
+
+        <div class="form-group">
+
+            <label for="roomName">
+                Название комнаты
+            </label>
+
+            <input
+                type="text"
+                id="roomName"
+                placeholder="Вечерняя мафия"
+                maxlength="50"
+            >
+
+        </div>
+
+
+        <!-- Количество игроков -->
+
+        <div class="form-group">
+
+            <label for="maxPlayers">
+                Количество игроков
+            </label>
+
+            <select
+                id="maxPlayers"
+                class="form-select"
+            >
+
+                <option value="4">
+                    4 игрока
+                </option>
+
+                <option value="5">
+                    5 игроков
+                </option>
+
+                <option value="6">
+                    6 игроков
+                </option>
+
+                <option value="7">
+                    7 игроков
+                </option>
+
+                <option value="8" selected>
+                    8 игроков
+                </option>
+
+                <option value="9">
+                    9 игроков
+                </option>
+
+                <option value="10">
+                    10 игроков
+                </option>
+
+                <option value="11">
+                    11 игроков
+                </option>
+
+                <option value="12">
+                    12 игроков
+                </option>
+
+                <option value="13">
+                    13 игроков
+                </option>
+
+                <option value="14">
+                    14 игроков
+                </option>
+
+                <option value="15">
+                    15 игроков
+                </option>
+
+                <option value="16">
+                    16 игроков
+                </option>
+
+                <option value="17">
+                    17 игроков
+                </option>
+
+                <option value="18">
+                    18 игроков
+                </option>
+
+                <option value="19">
+                    19 игроков
+                </option>
+
+                <option value="20">
+                    20 игроков
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Пароль -->
+
+        <div class="form-group">
+
+            <label for="roomPassword">
+                Пароль комнаты
+                <span class="optional">
+                    (необязательно)
+                </span>
+            </label>
+
+            <input
+                type="password"
+                id="roomPassword"
+                placeholder="Можно оставить пустым"
+                maxlength="100"
+            >
+
+        </div>
+
+
+        <!-- Кнопки -->
+
+        <div class="button-row">
+
+            <button
+                type="button"
+                id="backButton"
+                class="secondary-button"
+            >
+                Назад
+            </button>
+
+
+            <button
+                type="button"
+                id="createRoomButton"
+                class="primary-button"
+            >
+                Создать игру
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="notifications.js"></script>
+<script src="create-room.js"></script>
+
+</body>
+
+</html>
